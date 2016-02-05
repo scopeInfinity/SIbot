@@ -347,7 +347,7 @@ public:
 	}
 	std::vector<double> &getOutputs()
 	{
-		std::vector<int> v(no_of_outputs);
+		std::vector<double> v(no_of_outputs);
 		for(int i=0;i<no_of_outputs;i++)
 		{
 			v[i]=outputs[i]->getExpectedOutput();

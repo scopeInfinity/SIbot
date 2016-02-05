@@ -1,0 +1,1 @@
+while true;do ./$1 ;./$1 | ./myBot 1 $1;sleep 0.001;done

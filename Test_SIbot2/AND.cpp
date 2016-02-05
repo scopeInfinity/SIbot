@@ -10,7 +10,7 @@ int getRandom()
 }
 int main(int argc, char const *argv[])
 {
-	srand(time(NULL));
+	srand(time(NULL)*clock());
 	int a=getRandom(),b=getRandom();
 	std::cout<<a<<' '<<b<<std::endl;
 	if(a&&b)

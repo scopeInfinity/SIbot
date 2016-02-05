@@ -3,20 +3,18 @@
 #include<time.h>
 int getRandom()
 {
-	if(rand()*1.0/RAND_MAX>0.5)
-		return 1;
-	else
-		return 0;
+	return rand()*1.0/RAND_MAX*5;
 }
 int main(int argc, char const *argv[])
 {
-	srand(time(NULL));
+	srand(time(NULL)*clock());
 	int a=getRandom(),b=getRandom();
 	std::cout<<a<<' '<<b<<std::endl;
-	if(a&&b)
-		std::cout<<"1"<<std::endl;
+	for(int i=0;i<10;i++)
+	if(a+b>i)
+		std::cout<<"1 ";
 	else
-		std::cout<<"0"<<std::endl;
+		std::cout<<"0 ";
 	return 0;
 }
 

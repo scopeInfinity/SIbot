@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "SIbot1.cpp"
+#include "SIbot2.cpp"
 
 using namespace std;
 
@@ -8,13 +8,14 @@ int main(int argc,char *argv[])
 {
 	
 	
-	SIbot1<int> mybot(argc,argv);
+	SIbot<int> mybot(argc,argv);
+	
 	if(mybot.isLiveMode())
 	{
 		/// Live Mode
 		std::vector<int> v(mybot.getNumberInputs());
 		cout<<"Enter Inputs : ";
-		for(int i=0;i<mybot.getNumberInputs();i++)
+		for(int i=0;i<v.size();i++)
 			cin>>v[i];
 		mybot.findOutput(v);
 		std::vector<int> Result = mybot.giveNormalisedOutput();
